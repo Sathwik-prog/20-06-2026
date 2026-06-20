@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+blood_sugar_men = [113,85,90,150,149,88,93,115,135,80,77,82,129]
+blood_sugar_women = [67,89,120,133,150,84,69,89,79,120,112,100]
+
+type = [blood_sugar_men, blood_sugar_women]
+colors = ['green', 'red']
+label = ['men', 'women']
+bins = [80,100,125,150]
+plt.xlabel('Blood Sugar Range')
+plt.ylabel("total number of patients")
+# Diabetic blood_sugar range 
+#
+# 80-100: Normal
+# 100-125: Prediabetic
+# 125-150: Diabetic
+
+plt.hist(type, bins, color=colors, label=label, orientation='horizontal')
+
+plt.title(" Blood Sugar Level Chart")
+plt.legend()
+plt.show()
